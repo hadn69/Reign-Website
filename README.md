@@ -1,2 +1,2 @@
 # Reign Website
-~Hayden Neumeyer~
+Hayden Neumeyer
