@@ -289,7 +289,5 @@ footer.page-footer {
 }
 .card-image{
     height: 100px;
-    width: 100px;
     overflow: hidden;
-    align-content: center;
 }
