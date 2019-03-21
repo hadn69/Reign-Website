@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Black Sun Network</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="reset.css" type="text/css">
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  <link rel="shortcut icon" href="favicon.png">
+  <script src="scripts/minecraft.js"></script>
+  <script src="scripts/anal.js"></script>
+</head>
+<body>
+  <div id="video-bg">
+    <video preload="" webkit-playsinline="webkit-playsinline" autoplay="autoplay" loop="" class="video-background" poster="/preload.jpg">
+      <source src="bg.mp4" type="video/mp4">
+      </video>
+      <div class="overlay">
+        <div class="safewidth">
+          <section class="logonav">
+            <figure>
+              <img src="logo.png" width="160px" height="160px" />
+            </figure>
+            <nav>
+              <ul>
+                <li><a href="http://www.reddit.com/r/BlackSunNetwork"><img src="reddit.png" title="/r/AlienMC Reddit Community" width="30px" height="30px" /></a></li>
+                <li><a href="https://discord.gg/V6E2kJk"><img src="discord.png" title="Discord" width="30px" height="30px" /></a></li>
+                <li><a href="https://minecraft.curseforge.com/projects/black-sun"><img src="curse.png" title="Curse" width="30px" height="30px" /></a></li>
+                <li><a href="https://github.com/BlackSunNetwork"><img src="github.png" title="Our Github" width="30px" height="30px" /></a></li>
+              </ul>
+            </nav>
+          </section>
+          <section class="info">
+            <h4>Server Info:</h4>
+              <span>IP: Play.BlackSun.Network</span>
+              <span class="server-online"></span>
+              <script>
+                  MinecraftAPI.getServerStatus('play.blacksun.network', {
+                    port: 25565 // optional, only if you need a custom port
+                  }, function (err, status) {
+                    if (err) {
+                      return document.querySelector('.server-status').innerHTML = 'Error loading status';
+                    }
+                    document.querySelector('.server-online').innerHTML = status.online ? '<span class="server-up">online</span>' : '<span class="server-down">offline</span>';
+                  });
+                </script>
+              <br /><span><a href="https://github.com/BlackSunNetwork/AlienMC-FTBSubreddit-Public-Server/blob/master/Server%20Rules.md">Rules</a> | <a href="https://github.com/BlackSunNetwork/AlienMC-FTBSubreddit-Public-Server/blob/master/Server%20Specs.md">Specs</a></span>
+            </section>
+            <section class="about">
+              <h2>About Black Sun Network</h2>
+              <p>Black Sun Network was founded just this year as a replacement to the AlienMC name. We have no whitelist, an involved staff, and no donation benefits of any kind. We are not a money-making entity and everyone who is a part of our administration does so as a volunteer for the community. Stop in, say hello, we're always accepting new players, and always interested in meeting new people.</p>
+              <p>Our current map is running the <a href="https://minecraft.curseforge.com/projects/black-sun">Black Sun pack</a>, available on Curse. The pack comes with the current server information already saved in Multiplayer. Feel free to contact us on <a href="http://www.reddit.com/r/BlackSunNetwork">reddit</a> if you have any other questions or problems.</p>
+              <p style="font-size:.8em;margin-top: 3em">A note to parents, we cannot guarantee that this server will be child safe. We restrict very little in terms of discussion, as long as it is not disrespectful or bigoted.</p>
+
+            </section>
+            <section class="news">
+              <h2>Recent News</h2>
+            </section>
+          </div>
+        </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+      <script type="text/javascript">
+      $(function() {
+        $.getJSON( "https://www.reddit.com/r/BlackSunNetwork/search.json?q=flair%3AState%20of%20the%20Server&sort=new&restrict_sr=on.json", function( data ) {
+          var items = [];
+          var i = 0;
+          $.each( data['data']['children'], function( key, val ) {
+            if (i<6) {
+            items.push( '<li><a href="' + val['data']['url'] + '">' + val['data']['title'] + "</a></li>" );
+            i++;
+          }
+          });
+
+          $( "<ul/>", {
+            "class": "my-new-list",
+            html: items.join( "" )
+          }).appendTo( ".news" );
+
+        });
+      });
+
+      </script>
+    </body>
+</html>
