@@ -17,14 +17,14 @@ a{color:#BF0000;}
 }
 
 #headerbg {
-    background: #7F0000;
+    background: #FF4081;
     z-index: -2;
     position: relative;
 }
 
-.default_color{background-color: #7F0000 !important}
+.default_color{background-color: #FF4081 !important}
 
-.default_color_text{color: #7F0000 !important}
+.default_color_text{color: #FF4081 !important}
 
 .icon-block {
     padding: 0 15px;
@@ -67,25 +67,25 @@ a{color:#BF0000;}
 
 .text_h2 {font-weight: 100;margin-bottom: 4%; line-height: 4.5rem;}
 
-.span_h2 {font-weight: 300;color: #7F0000;}
+.span_h2 {font-weight: 300;color: #FF4081;}
 
-.text_b{color: #7F0000;}
+.text_b{color: #FF4081;}
 
 .in{font-weight: 400 !important; font-style: normal !important;}
 
 .promo i {
-    color: #7F0000;
+    color: #FF4081;
     font-size: 7rem;
     display: block;
 }
-.card-content a {color: #7F0000;}
+.card-content a {color: #FF4081;}
 
-.card-content a:hover {color: #7F0000;}
+.card-content a:hover {color: #FF4081;}
 
  #Leadership{background: #080808;}
 
 #em{
-     color: #7F0000;
+     color: #FF4081;
      font-size: 0.85em;
  }
 
@@ -136,7 +136,7 @@ nav ul a {
 }
 
 .cd-headline.type .cd-words-wrapper.selected b {
-    color: #7F0000;
+    color: #FF4081;
 }
 
 .cd-headline.type b {
